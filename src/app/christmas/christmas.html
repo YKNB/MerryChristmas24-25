@@ -1,0 +1,83 @@
+<div class="page">
+  <header class="topbar">
+    <div class="brand">🎄 MerryChristmas</div>
+    <button class="ghost" *ngIf="submitted" (click)="reset()">Recommencer</button>
+  </header>
+
+  <main class="grid">
+    <!-- GAUCHE: parade cadeaux -->
+    <aside class="left card">
+      <div class="parade">
+        <div class="lane lane1">
+          <span class="gift">🎁</span><span class="gift">🧸</span><span class="gift">🎁</span><span class="gift">🍬</span>
+          <span class="gift">🎁</span><span class="gift">🎀</span><span class="gift">🎁</span><span class="gift">⭐</span>
+        </div>
+        <div class="lane lane2">
+          <span class="gift">🧦</span><span class="gift">🎁</span><span class="gift">🧸</span><span class="gift">🎁</span>
+          <span class="gift">🍭</span><span class="gift">🎁</span><span class="gift">🎀</span><span class="gift">🎁</span>
+        </div>
+      </div>
+      <div class="snow"></div>
+    </aside>
+
+    <!-- CENTRE: saisie + message -->
+    <section class="center card">
+      <h1>🎅 Ho ho ho!</h1>
+
+      <form *ngIf="!submitted" (submit)="$event.preventDefault(); submit()" class="form">
+        <label for="name">Ton nom</label>
+        <input id="name" name="name" [(ngModel)]="name" placeholder="Ex: Karl" />
+        <button class="cta" type="submit">Lancer la magie ✨</button>
+      </form>
+
+      <div *ngIf="submitted" class="message">
+        <div class="badge">✨ Message du Pôle Nord</div>
+        <h2>Joyeux Noël, <span class="who">{{ name }}</span> !</h2>
+        <p>Que la joie, la paix et les cadeaux te trouvent… même si tu te caches derrière ton écran 🎁</p>
+      </div>
+    </section>
+
+    <!-- DROITE: 3D -->
+    <section class="right card">
+      <h2 class="panel">Scène 3D</h2>
+
+      <div class="trees">
+        <model-viewer
+          class="model"
+          src="models/tree.glb"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1"
+          alt="Sapin 3D">
+        </model-viewer>
+
+        <model-viewer
+          class="model"
+          src="models/tree.glb"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1"
+          alt="Sapin 3D">
+        </model-viewer>
+      </div>
+
+      <div class="santaWrap" *ngIf="submitted">
+        <div class="sparkle">✨✨✨</div>
+        <model-viewer
+          class="model santa"
+          src="models/santa.glb"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1.1"
+          alt="Père Noël 3D">
+        </model-viewer>
+        <div class="santaText">🎅 Joyeux Noël {{ name }} !</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">❄️ Fait avec Angular 20 + un soupçon de magie</footer>
+</div>
