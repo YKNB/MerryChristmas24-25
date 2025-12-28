@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "myconnect-fe85c"
+  },
+  "targets": {
+    "myconnect-fe85c": {
+      "hosting": {
+        "wisheschristmas": [
+          "wisheschristmas"
+        ]
+      }
+    }
+  }
+}
