@@ -1,0 +1,16 @@
+export default `<!doctype html>
+<html lang="en" data-beasties-container="">
+<head>
+  <meta charset="utf-8">
+  <title>Merrychristmas</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <script type="module" src="/model-viewer.min.js"></script> -->
+   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+<body ngcm="">
+  <app-root></app-root>
+<script src="main-5TXL3L4O.js" type="module"></script></body>
+</html>
+`;

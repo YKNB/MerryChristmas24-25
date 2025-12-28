@@ -1,6 +1,13 @@
 # Merrychristmas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+A festive Angular 21 single-page app with animated snow, 3D models (model-viewer), sound effects, and day/night Christmas themes. The user enters a name, triggers the animation, and gets a personalized greeting. Assets live in `public/` and the UI is in `src/app/christmas/`.
+
+## Features
+
+- Day/Night Noel themes with animated snow
+- 3D models via `model-viewer`
+- Name validation and a lightweight loader
+- Responsive layout for mobile
 
 ## Development server
 
@@ -35,6 +42,22 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Deploy (Firebase Hosting)
+
+Make sure the Firebase CLI is installed and you are logged in:
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+Build and deploy:
+
+```bash
+ng build
+firebase deploy --only hosting:wisheschristmas
+```
 
 ## Running unit tests
 
